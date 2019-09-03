@@ -30,12 +30,12 @@ router.get('/', checkAuth, (request, response) => {
         : response.status(204).end();
     });
 
-router.get('/test/:taskId', checkAuth, (request, response) => {
-    const id = request.params.taskId; //Get the parameter passed
-    response.status(200).json({
-        message: `Task with ID = ${id} was fetched`
+router.get('/:deliveryId', checkAuth, (request, response) => {
+    const delivery = db[request.params.deliveryId];
+    delivery
+        ? response.json(delivery)
+        : notFound(request, response);
     });
-});
 
 router.patch('/test/:taskId', checkAuth, (request, response) => {
     const id = request.params.taskId; //Get the parameter passed
