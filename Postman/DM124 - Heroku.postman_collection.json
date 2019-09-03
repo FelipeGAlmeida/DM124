@@ -1,0 +1,136 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DM124 - Heroku",
+		"_postman_id": "f79cccb0-cf28-760e-f47b-15ad7a2e2569",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST HEROKU",
+			"request": {
+				"url": "https://dm124-felipe.herokuapp.com/api/deliveries",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a POST to the API in Heroku"
+			},
+			"response": []
+		},
+		{
+			"name": "GET HEROKU",
+			"request": {
+				"url": "https://dm124-felipe.herokuapp.com/api/deliveries",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a GET to the API in Heroku"
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ID HEROKU",
+			"request": {
+				"url": "https://dm124-felipe.herokuapp.com/api/deliveries/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a GET by ID to the API in Heroku"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH/ID HEROKU",
+			"request": {
+				"url": "https://dm124-felipe.herokuapp.com/api/deliveries/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a PATCH by ID to the API in Heroku"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/ID HEROKU",
+			"request": {
+				"url": "https://dm124-felipe.herokuapp.com/api/deliveries/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a DELETE by ID to the API in Heroku"
+			},
+			"response": []
+		}
+	]
+}

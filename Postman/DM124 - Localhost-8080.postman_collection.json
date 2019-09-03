@@ -1,0 +1,136 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DM124 - Localhost:8080",
+		"_postman_id": "1f9b864c-941b-f2e4-851e-4c1bf8db4df8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST LOCALHOST",
+			"request": {
+				"url": "localhost:8080/api/deliveries",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a POST to the API in Localhost:8080"
+			},
+			"response": []
+		},
+		{
+			"name": "GET LOCALHOST",
+			"request": {
+				"url": "localhost:8080/api/deliveries",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a GET to the API in Localhost:8080"
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ID LOCALHOST",
+			"request": {
+				"url": "localhost:8080/api/deliveries/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a GET by ID to the API in Localhost:8080"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH/ID LOCALHOST",
+			"request": {
+				"url": "localhost:8080/api/deliveries/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a PATCH by ID to the API in Localhost:8080"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/ID LOCALHOST",
+			"request": {
+				"url": "localhost:8080/api/deliveries/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cHJvdmVkb3IyMDE5",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 2,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+				},
+				"description": "Perform a DELETE by ID to the API in Localhost:8080"
+			},
+			"response": []
+		}
+	]
+}
