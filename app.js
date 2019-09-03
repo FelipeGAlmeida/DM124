@@ -4,8 +4,8 @@ const routes = require('./routes/routes.js')
 const not_found = require('./utils/not-found')
 const app = express();
 
-const host = 'localhost';
-const port = 8080;
+const host = process.env.HOST || 'localhost';
+const port = process.env.PORT || 8080;
 
 //Setup CORS policy
 app.use(function (req, res, next) {

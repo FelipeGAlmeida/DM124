@@ -4,7 +4,7 @@
   "description": "projeto final da disciplina dm124",
   "main": "app.js",
   "scripts": {
-    "start": "node server",
+    "start": "node app.js",
     "start:dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
