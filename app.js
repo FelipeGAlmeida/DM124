@@ -1,6 +1,7 @@
 const http = require('http')
 const express = require('express');
 const routes = require('./routes/routes.js')
+const not_found = require('./utils/not-found')
 const app = express();
 
 const host = 'localhost';
@@ -18,6 +19,9 @@ app.use(function (req, res, next) {
 
 //Setup the routes file
 app.use('/api', routes);
+
+//Setup default route for not found requests
+app.use(not_found);
 
 //Start the server
 http.createServer(app)
