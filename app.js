@@ -1,5 +1,6 @@
 const http = require('http')
 const express = require('express');
+const bodyParser = require('body-parser');
 const routes = require('./routes/routes.js')
 const not_found = require('./utils/not-found')
 const app = express();
@@ -17,8 +18,11 @@ app.use(function (req, res, next) {
     next();
 });
 
+//Setup body-parser to access req. body
+app.use(bodyParser.json());
+
 //Setup the routes file
-app.use('/api', routes);
+app.use('/api/deliveries', routes);
 
 //Setup default route for not found requests
 app.use(not_found);
