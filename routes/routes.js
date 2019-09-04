@@ -13,7 +13,7 @@ router.post('/', checkAuth, (request, response) => {
         receiver: request.body.receiver,
         receiverCpf: request.body.receiverCpf,
         receiverIsclient: request.body.receiverIsclient || false,
-        date: request.body.date,
+        date: new Date().toISOString(),
         location: request.body.location
     }
     
@@ -46,7 +46,6 @@ router.patch('/:deliveryId', checkAuth, (request, response) => {
         delivery.receiver = request.body.receiver || delivery.receiver
         delivery.receiverCpf= request.body.receiverCpf || delivery.receiverCpf
         delivery.receiverIsclient = hasValue ? request.body.receiverIsclient : delivery.receiverIsclient
-        delivery.date = request.body.date || delivery.date
         delivery.location = request.body.location || delivery.location
         response.json(delivery)
     } else {
