@@ -6,6 +6,18 @@ let db = {};
 let sequence = 0;
 
 router.post('/', checkAuth, (request, response) => {
+    if(request.body.orderId === undefined ||
+        request.body.clientId === undefined ||
+        request.body.receiver === undefined ||
+        request.body.receiverCpf === undefined ||
+        request.body.receiverIsclient === undefined ||
+        request.body.location === undefined){
+            response.status(400).json({
+                message: "Missing fields in the request. Refer to the docs and try again"
+            })
+            return response.end()
+    }
+
     const delivery = {
         id: ++sequence,
         orderId: request.body.orderId,
