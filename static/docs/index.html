@@ -2,193 +2,131 @@
 <html>
   <head>
     <title>DM124 - API.docs</title>
-    <script type="application/javascript" src="/client.js"></script>
     <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
     <style>
-        .card{
-          border-radius: 10px;
-          border: 2px solid;
-          margin-right: 8%;
-          margin-left: 8%;
-          margin-top: 2%;
-        }
+      body{
+        background-image: url(https://www.setaswall.com/wp-content/uploads/2017/12/Binary-Code-Wallpaper-07-1920x1080.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
 
-        .method {
-          color: white;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-top: 4px;
-          padding-bottom: 4px;
-          display: inline;
-          border-radius: 10px;
-          border: 2px solid;
-        }
+      ::-webkit-scrollbar {
+        display: none;
+      }
 
-        .path {
-          display: inline;
-          font-style: italic;
-          margin-left: 3%;
-        }
+      .card{
+        border-radius: 10px;
+        border: 2px solid;
+        margin-right: 8%;
+        margin-left: 8%;
+        margin-top: 2%;
+        box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.6);
+      }
 
-        .font-bold {
-          font-weight: 600;
-        }
+      .method {
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        display: inline;
+        border-radius: 10px;
+        border: 2px solid;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+      }
 
-        .font-size {
-          font-size: 1.2rem;
-        }
+      .path {
+        display: inline;
+        font-style: italic;
+        margin-left: 3%;
+      }
 
-        .font-size-2 {
-          font-size: 1.5rem;
-        }
+      .font-bold {
+        font-weight: 600;
+      }
 
-        .center {
-          text-align: center;
-          margin: 0;
-        }
+      .font-size {
+        font-size: 1.2rem;
+      }
 
-        .column {
-          display: inline-block;
-          width: 49%
-        }
+      .font-size-2 {
+        font-size: 1.5rem;
+      }
 
-        .line {
-          border-bottom: 2px solid;
-          padding: 8px;
-        }
+      .center {
+        text-align: center;
+        margin: 0;
+      }
 
-        .p-0{
-          padding: 2px;
-        }
+      .column {
+        display: inline-block;
+        width: 49%
+      }
 
-        .m-0{
-          margin: 0;
-          margin-left: 5px;
-        }
+      .line {
+        border-bottom: 2px solid;
+        padding: 8px;
+      }
 
-        </style>
+      .p-0{
+        padding: 2px;
+      }
+
+      .m-0{
+        margin: 0;
+        margin-left: 5px;
+      }
+
+      .clickable{
+        cursor: pointer;
+      }
+
+      .felipe{
+        color:wheat;
+        position: relative;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-5%);
+        margin-top: 2.5%;
+      }
+
+    </style>
+    <script>
+      function hideOrShow(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
   </head>
 
   <body>
-    <div class="card" style="background-color:rgb(248, 255, 208); border-color: rgb(209, 207, 75)">
-        <h1 style="text-align: center">DM124 API DOCUMENTATION</h1>
-        <p style="text-align: center">This simple web page was developed to provide further help when using the DM124 API.</p>
-        <p style="text-align: center">This API is the final project of the subject: DM124 - Web Services development with security under Java and Node.js enviroment.</p>
-        <p style="text-align: center">It was taught by the teacher Ednardo David Segura.</p>
-        <p style="text-align: center">About me, the developer: Felipe G. Almeida - <a href="https://github.com/FelipeGAlmeida">GitHub@FelipeGAlmeida</a></p>
+    <div class="card" style="background-color:rgba(240, 248, 255, 0.9); border-color: rgba(173, 216, 230, 0.9)">
+        <h1 class="card" style="text-align: center; color: rgb(11, 54, 87)">DM124 API DOCUMENTATION</h1>
+        <p style="text-align: center;">This simple web page was developed to provide further help when using the DM124 API.</p>
+        <p style="text-align: center;">This API is the final project of the subject: DM124 - Web Services development with security under Java and Node.js enviroment.</p>
+        <p style="text-align: center;">It was taught by the teacher Ednardo David Segura.</p>
+        <p style="text-align: center;">About me, the developer: <b>Felipe G. Almeida - <a href="https://github.com/FelipeGAlmeida/DM124">GitHub@FelipeGAlmeida:DM124</a></b></p>
     </div>
     
     <!-- POST -->
-    <div class="card" style="background-color:rgb(140, 250, 186); border-color: rgb(0, 220, 55)">
+    <div class="card" style="background-color:rgba(140, 250, 186, 0.85); border-color: rgba(0, 220, 55, 0.9)">
       <!-- METHOD E PATH -->
-      <div class="line" style="border-color:rgb(0, 220, 55)">
-        <p class="method font-bold font-size" style="background-color:rgb(0, 230, 50); border-color: rgb(25, 172, 62)">POST</p>
+      <div class="line clickable" onclick="hideOrShow('POST')" style="border-color:rgba(0, 220, 55, 0.9); background-color: rgba(140, 250, 186, 0.6);">
+        <p class="method font-bold font-size" style="background-color:rgba(0, 230, 50, 0.9); border-color: rgba(25, 172, 62, 0.9)">POST</p>
         <p class="path font-bold font-size-2">/deliveries</p>
-        <p class="m-0 font-size" style="float: right; color: rgb(0, 82, 7)">Adds a new Delivery object</p>
+        <p class="m-0 font-size" style="float: right; color: rgba(0, 82, 7, 0.9)">Adds a new Delivery object</p>
       </div>
 
-      <!-- HEADERS -->
-      <div class="line p-0" style="border-color:rgb(0, 220, 55); background-color:rgb(90, 253, 158);">
-        <p class="font-bold font-size center">Headers</p>
-      </div>
-      <div class="line p-0" style="border-color:rgb(0, 220, 55)">
-        <div class="column">
-          <p class="font-bold font-size m-0">Authentication</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">Basic YWRtaW46cHJvdmVkb3IyMDE5</p>
-        </div>
-        <div class="column">
-          <p class="font-bold font-size m-0">Content-Type</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">application/json</p>
-        </div>
-      </div>
-
-      <!-- BODY -->
-      <div class="line p-0" style="border-color:rgb(0, 220, 55); background-color:rgb(90, 253, 158);">
-        <p class="font-bold font-size center">Body</p>
-      </div>
-      <div class="line p-0" style="border-color:rgb(0, 220, 55)">
-        <div class="column">
-          <p class="font-bold font-size m-0">orderId</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">The order ID.</p>
-        </div>
-        <div class="column">
-          <p class="font-bold font-size m-0">clientId</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">The client ID.</p>
-        </div>
-        <div class="column">
-          <p class="font-bold font-size m-0">receiver</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">The receiver name.</p>
-        </div>
-        <div class="column">
-          <p class="font-bold font-size m-0">receiverCpf</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">The receiver CPF.</p>
-        </div>
-        <div class="column">
-          <p class="font-bold font-size m-0">receiverIsClient</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">The value that indicates if receiver is the client.</p>
-        </div>
-        <div class="column">
-          <p class="font-bold font-size m-0">location</p>
-        </div>
-        <div class="column">
-          <p class="font-size m-0">The location for delivery.</p>
-        </div>
-      </div>
-
-      <!-- RESPONSE -->
-      <div class="line p-0" style="border-color:rgb(0, 220, 55); background-color:rgb(90, 253, 158);">
-          <p class="font-bold font-size center">Responses</p>
-        </div>
-        <div class="line p-0" style="border-color:rgb(0, 220, 55)">
-          <div class="column">
-            <p class="font-bold font-size m-0">200</p>
-          </div>
-          <div class="column">
-            <p class="font-size m-0">The delivery object that had just been added.</p>
-          </div>
-          <div class="column">
-            <p class="font-bold font-size m-0">400</p>
-          </div>
-          <div class="column">
-            <p class="font-size m-0">The request missed some required fields in body.</p>
-          </div>
-          <div class="column">
-              <p class="font-bold font-size m-0">401</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The request missed or doesn't match the authentication in header.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- GET -->
-    <div class="card" style="background-color:rgb(174, 212, 255); border-color: rgb(0, 174, 255)">
-        <!-- METHOD E PATH -->
-        <div class="line" style="border-color:rgb(0, 174, 255)">
-          <p class="method font-bold font-size" style="background-color:rgb(0, 136, 255); border-color: rgb(0, 110, 255)">GET</p>
-          <p class="path font-bold font-size-2">/deliveries</p>
-          <p class="m-0 font-size" style="float: right; color: rgb(0, 49, 105)">Lists all delivery objects added</p>
-        </div>
-  
+      <div id="POST" style="display: none;">
         <!-- HEADERS -->
-        <div class="line p-0" style="border-color:rgb(0, 174, 255); background-color:rgb(145, 196, 253);">
+        <div class="line p-0" style="border-color:rgba(0, 220, 55, 0.9); background-color:rgba(90, 253, 158, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
           <p class="font-bold font-size center">Headers</p>
         </div>
-        <div class="line p-0" style="border-color:rgb(0, 174, 255)">
+        <div class="line p-0" style="border-color:rgba(0, 220, 55, 0.9)">
           <div class="column">
             <p class="font-bold font-size m-0">Authentication</p>
           </div>
@@ -202,23 +140,66 @@
             <p class="font-size m-0">application/json</p>
           </div>
         </div>
-  
+
+        <!-- BODY -->
+        <div class="line p-0" style="border-color:rgba(0, 220, 55, 0.9); background-color:rgba(90, 253, 158, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+          <p class="font-bold font-size center">Body</p>
+        </div>
+        <div class="line p-0" style="border-color:rgba(0, 220, 55, 0.9)">
+          <div class="column">
+            <p class="font-bold font-size m-0">orderId</p>
+          </div>
+          <div class="column">
+            <p class="font-size m-0">The order ID.</p>
+          </div>
+          <div class="column">
+            <p class="font-bold font-size m-0">clientId</p>
+          </div>
+          <div class="column">
+            <p class="font-size m-0">The client ID.</p>
+          </div>
+          <div class="column">
+            <p class="font-bold font-size m-0">receiver</p>
+          </div>
+          <div class="column">
+            <p class="font-size m-0">The receiver name.</p>
+          </div>
+          <div class="column">
+            <p class="font-bold font-size m-0">receiverCpf</p>
+          </div>
+          <div class="column">
+            <p class="font-size m-0">The receiver CPF.</p>
+          </div>
+          <div class="column">
+            <p class="font-bold font-size m-0">receiverIsClient</p>
+          </div>
+          <div class="column">
+            <p class="font-size m-0">The value that indicates if receiver is the client.</p>
+          </div>
+          <div class="column">
+            <p class="font-bold font-size m-0">location</p>
+          </div>
+          <div class="column">
+            <p class="font-size m-0">The location for delivery.</p>
+          </div>
+        </div>
+
         <!-- RESPONSE -->
-        <div class="line p-0" style="border-color:rgb(0, 174, 255); background-color:rgb(145, 196, 253);">
+        <div class="line p-0" style="border-color:rgba(0, 220, 55, 0.9); background-color:rgba(90, 253, 158, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
             <p class="font-bold font-size center">Responses</p>
           </div>
-          <div class="line p-0" style="border-color:rgb(0, 174, 255)">
+          <div class="line p-0" style="border: none">
             <div class="column">
               <p class="font-bold font-size m-0">200</p>
             </div>
             <div class="column">
-              <p class="font-size m-0">The list of all delivery objects.</p>
+              <p class="font-size m-0">The delivery object that had just been added.</p>
             </div>
             <div class="column">
-              <p class="font-bold font-size m-0">204</p>
+              <p class="font-bold font-size m-0">400</p>
             </div>
             <div class="column">
-              <p class="font-size m-0">There are not any delivery objects added.</p>
+              <p class="font-size m-0">The request missed some required fields in body.</p>
             </div>
             <div class="column">
                 <p class="font-bold font-size m-0">401</p>
@@ -228,21 +209,23 @@
               </div>
           </div>
       </div>
+    </div>
 
-      <!-- GET BY ID -->
-      <div class="card" style="background-color:rgb(174, 212, 255); border-color: rgb(0, 174, 255)">
-          <!-- METHOD E PATH -->
-          <div class="line" style="border-color:rgb(0, 174, 255)">
-            <p class="method font-bold font-size" style="background-color:rgb(0, 136, 255); border-color: rgb(0, 110, 255)">GET</p>
-            <p class="path font-bold font-size-2">/deliveries/:deliveryId</p>
-            <p class="m-0 font-size" style="float: right; color: rgb(0, 49, 105);">Fetches the matching delivery object</p>
-          </div>
-    
+    <!-- GET -->
+    <div class="card" style="background-color:rgba(174, 212, 255, 0.85); border-color: rgba(0, 174, 255, 0.9)">
+        <!-- METHOD E PATH -->
+        <div class="line clickable" onclick="hideOrShow('GET')" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(174, 212, 255, 0.6);">
+          <p class="method font-bold font-size" style="background-color:rgba(0, 136, 255, 0.9); border-color: rgba(0, 110, 255, 0.9)">GET</p>
+          <p class="path font-bold font-size-2">/deliveries</p>
+          <p class="m-0 font-size" style="float: right; color: rgba(0, 49, 105, 0.9)">Lists all delivery objects added</p>
+        </div>
+  
+        <div id="GET" style="display: none;">
           <!-- HEADERS -->
-          <div class="line p-0" style="border-color:rgb(0, 174, 255); background-color:rgb(145, 196, 253);">
+          <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(145, 196, 253, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
             <p class="font-bold font-size center">Headers</p>
           </div>
-          <div class="line p-0" style="border-color:rgb(0, 174, 255)">
+          <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9)">
             <div class="column">
               <p class="font-bold font-size m-0">Authentication</p>
             </div>
@@ -254,148 +237,275 @@
             </div>
             <div class="column">
               <p class="font-size m-0">application/json</p>
-            </div>
-          </div>
-
-          <!-- PARAMETERS -->
-          <div class="line p-0" style="border-color:rgb(0, 174, 255); background-color:rgb(145, 196, 253);">
-              <p class="font-bold font-size center">Parameters</p>
-          </div>
-          <div class="line p-0" style="border-color:rgb(0, 174, 255)">
-            <div class="column">
-              <p class="font-bold font-size m-0">deliveryId</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The delivery id to search for.</p>
             </div>
           </div>
     
           <!-- RESPONSE -->
-          <div class="line p-0" style="border-color:rgb(0, 174, 255); background-color:rgb(145, 196, 253);">
+          <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(145, 196, 253, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
               <p class="font-bold font-size center">Responses</p>
             </div>
-            <div class="line p-0" style="border-color:rgb(0, 174, 255)">
+            <div class="line p-0" style="border: none">
               <div class="column">
                 <p class="font-bold font-size m-0">200</p>
               </div>
               <div class="column">
-                <p class="font-size m-0">The delivery object that matches the passed 'ID'.</p>
+                <p class="font-size m-0">The list of all delivery objects.</p>
               </div>
               <div class="column">
-                <p class="font-bold font-size m-0">401</p>
+                <p class="font-bold font-size m-0">204</p>
               </div>
               <div class="column">
-                  <p class="font-size m-0">The request missed or doesn't match the authentication in header.</p>
+                <p class="font-size m-0">There are not any delivery objects added.</p>
               </div>
               <div class="column">
-                  <p class="font-bold font-size m-0">404</p>
+                  <p class="font-bold font-size m-0">401</p>
                 </div>
                 <div class="column">
-                  <p class="font-size m-0">The requested delivery object was not found, 'ID' may be not added.</p>
+                  <p class="font-size m-0">The request missed or doesn't match the authentication in header.</p>
                 </div>
             </div>
-        </div>
+          </div>
+      </div>
 
-        <!-- PATCH -->
-      <div class="card" style="background-color:rgb(196, 196, 196); border-color: rgb(110, 110, 110)">
+      <!-- GET BY ID -->
+      <div class="card" style="background-color:rgba(174, 212, 255, 0.85); border-color: rgba(0, 174, 255, 0.9)">
           <!-- METHOD E PATH -->
-          <div class="line" style="border-color:rgb(110, 110, 110)">
-            <p class="method font-bold font-size" style="background-color:rgb(131, 131, 131); border-color: rgb(107, 107, 107)">PATCH</p>
+          <div class="line clickable" onclick="hideOrShow('GET_ID')" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(174, 212, 255, 0.6);">
+            <p class="method font-bold font-size" style="background-color:rgba(0, 136, 255, 0.9); border-color: rgba(0, 110, 255, 0.9)">GET</p>
             <p class="path font-bold font-size-2">/deliveries/:deliveryId</p>
-            <p class="m-0 font-size" style="float: right; color: rgb(44, 44, 44)">Updates the matching delivery object</p>
-          </div>
-    
-          <!-- HEADERS -->
-          <div class="line p-0" style="border-color:rgb(110, 110, 110); background-color:rgb(172, 172, 172);">
-            <p class="font-bold font-size center">Headers</p>
-          </div>
-          <div class="line p-0" style="border-color:rgb(110, 110, 110)">
-            <div class="column">
-              <p class="font-bold font-size m-0">Authentication</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">Basic YWRtaW46cHJvdmVkb3IyMDE5</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">Content-Type</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">application/json</p>
-            </div>
+            <p class="m-0 font-size" style="float: right; color: rgba(0, 49, 105, 0.9);">Fetches the matching delivery object</p>
           </div>
 
-          <!-- PARAMETERS -->
-          <div class="line p-0" style="border-color:rgb(110, 110, 110); background-color:rgb(172, 172, 172);">
-              <p class="font-bold font-size center">Parameters</p>
+          <div id="GET_ID" style="display: none;">
+            <!-- HEADERS -->
+            <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(145, 196, 253, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+              <p class="font-bold font-size center">Headers</p>
             </div>
-            <div class="line p-0" style="border-color:rgb(110, 110, 110)">
+            <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9)">
+              <div class="column">
+                <p class="font-bold font-size m-0">Authentication</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">Basic YWRtaW46cHJvdmVkb3IyMDE5</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">Content-Type</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">application/json</p>
+              </div>
+            </div>
+
+            <!-- PARAMETERS -->
+            <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(145, 196, 253, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+                <p class="font-bold font-size center">Parameters</p>
+            </div>
+            <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9)">
               <div class="column">
                 <p class="font-bold font-size m-0">deliveryId</p>
               </div>
               <div class="column">
-                <p class="font-size m-0">The delivery ID to search for updating.</p>
+                <p class="font-size m-0">The delivery id to search for.</p>
               </div>
             </div>
-    
-          <!-- BODY -->
-          <div class="line p-0" style="border-color:rgb(110, 110, 110); background-color:rgb(172, 172, 172);">
-            <p class="font-bold font-size center">Body</p>
-          </div>
-          <div class="line p-0" style="border-color:rgb(110, 110, 110)">
-            <div class="column">
-              <p class="font-bold font-size m-0">orderId</p>
+      
+            <!-- RESPONSE -->
+            <div class="line p-0" style="border-color:rgba(0, 174, 255, 0.9); background-color:rgba(145, 196, 253, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+                <p class="font-bold font-size center">Responses</p>
+              </div>
+              <div class="line p-0" style="border: none">
+                <div class="column">
+                  <p class="font-bold font-size m-0">200</p>
+                </div>
+                <div class="column">
+                  <p class="font-size m-0">The delivery object that matches the passed 'ID'.</p>
+                </div>
+                <div class="column">
+                  <p class="font-bold font-size m-0">401</p>
+                </div>
+                <div class="column">
+                    <p class="font-size m-0">The request missed or doesn't match the authentication in header.</p>
+                </div>
+                <div class="column">
+                    <p class="font-bold font-size m-0">404</p>
+                  </div>
+                  <div class="column">
+                    <p class="font-size m-0">The requested delivery object was not found, 'ID' may be not added.</p>
+                  </div>
+              </div>
             </div>
-            <div class="column">
-              <p class="font-size m-0">The new order ID to be updated.</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">clientId</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The new client ID to be updated.</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">receiver</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The new receiver name to be updated.</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">receiverCpf</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The new receiver CPF to be updated.</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">receiverIsClient</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The new value that indicates if receiver is client.</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">location</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The new location to be updated.</p>
-            </div>
+        </div>
+
+        <!-- PATCH -->
+      <div class="card" style="background-color:rgba(196, 196, 196, 0.85); border-color: rgba(110, 110, 110, 0.9)">
+          <!-- METHOD E PATH -->
+          <div class="line clickable" onclick="hideOrShow('PATCH')" style="border-color:rgba(110, 110, 110, 0.9); background-color:rgba(196, 196, 196, 0.6);">
+            <p class="method font-bold font-size" style="background-color:rgba(131, 131, 131, 0.9); border-color: rgba(107, 107, 107, 0.9)">PATCH</p>
+            <p class="path font-bold font-size-2">/deliveries/:deliveryId</p>
+            <p class="m-0 font-size" style="float: right; color: rgba(44, 44, 44, 0.9)">Updates the matching delivery object</p>
           </div>
     
-          <!-- RESPONSE -->
-          <div class="line p-0" style="border-color:rgb(110, 110, 110); background-color:rgb(172, 172, 172);">
+          <div id="PATCH" style="display: none;">
+            <!-- HEADERS -->
+            <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9); background-color:rgba(172, 172, 172, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+              <p class="font-bold font-size center">Headers</p>
+            </div>
+            <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9)">
+              <div class="column">
+                <p class="font-bold font-size m-0">Authentication</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">Basic YWRtaW46cHJvdmVkb3IyMDE5</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">Content-Type</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">application/json</p>
+              </div>
+            </div>
+
+            <!-- PARAMETERS -->
+            <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9); background-color:rgba(172, 172, 172, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+                <p class="font-bold font-size center">Parameters</p>
+              </div>
+              <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9)">
+                <div class="column">
+                  <p class="font-bold font-size m-0">deliveryId</p>
+                </div>
+                <div class="column">
+                  <p class="font-size m-0">The delivery ID to search for updating.</p>
+                </div>
+              </div>
+      
+            <!-- BODY -->
+            <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9); background-color:rgba(172, 172, 172, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+              <p class="font-bold font-size center">Body</p>
+            </div>
+            <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9)">
+              <div class="column">
+                <p class="font-bold font-size m-0">orderId</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The new order ID to be updated.</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">clientId</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The new client ID to be updated.</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">receiver</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The new receiver name to be updated.</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">receiverCpf</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The new receiver CPF to be updated.</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">receiverIsClient</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The new value that indicates if receiver is client.</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">location</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The new location to be updated.</p>
+              </div>
+            </div>
+      
+            <!-- RESPONSE -->
+            <div class="line p-0" style="border-color:rgba(110, 110, 110, 0.9); background-color:rgba(172, 172, 172, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+                <p class="font-bold font-size center">Responses</p>
+              </div>
+              <div class="line p-0" style="border: none">
+                <div class="column">
+                  <p class="font-bold font-size m-0">200</p>
+                </div>
+                <div class="column">
+                  <p class="font-size m-0">The delivery object have been updated sucessfully.</p>
+                </div>
+                <div class="column">
+                  <p class="font-bold font-size m-0">401</p>
+                </div>
+                <div class="column">
+                    <p class="font-size m-0">The request missed or doesn't match the authentication in header.</p>
+                </div>
+                <div class="column">
+                    <p class="font-bold font-size m-0">404</p>
+                  </div>
+                  <div class="column">
+                    <p class="font-size m-0">The requested delivery object was not found, 'ID' may be not added.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- DELETE -->
+      <div class="card" style="background-color:rgba(230, 173, 173, 0.85); border-color: rgba(211, 49, 49, 0.9)">
+          <!-- METHOD E PATH -->
+          <div class="line clickable" onclick="hideOrShow('DELETE')" style="border-color:rgba(211, 49, 49, 0.9); background-color:rgba(230, 173, 173, 0.6);">
+            <p class="method font-bold font-size" style="background-color:rgba(226, 43, 43, 0.9); border-color: rgba(163, 23, 23, 0.9)">DELETE</p>
+            <p class="path font-bold font-size-2">/deliveries/:deliveryId</p>
+            <p class="m-0 font-size" style="float: right; color: rgba(90, 0, 0, 0.9)">Deletes the matching delivery object</p>
+          </div>
+    
+          <div id="DELETE" style="display: none;">
+            <!-- HEADERS -->
+            <div class="line p-0" style="border-color:rgba(211, 49, 49, 0.9); background-color: rgba(223, 124, 124, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+              <p class="font-bold font-size center">Headers</p>
+            </div>
+            <div class="line p-0" style="border-color:rgba(211, 49, 49, 0.9)">
+              <div class="column">
+                <p class="font-bold font-size m-0">Authentication</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">Basic YWRtaW46cHJvdmVkb3IyMDE5</p>
+              </div>
+              <div class="column">
+                <p class="font-bold font-size m-0">Content-Type</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">application/json</p>
+              </div>
+            </div>
+
+            <!-- PARAMETERS -->
+            <div class="line p-0" style="border-color:rgba(211, 49, 49, 0.9); background-color: rgba(223, 124, 124, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
+              <p class="font-bold font-size center">Parameters</p>
+            </div>
+            <div class="line p-0" style="border-color:rgba(211, 49, 49, 0.9)">
+              <div class="column">
+                <p class="font-bold font-size m-0">deliveryId</p>
+              </div>
+              <div class="column">
+                <p class="font-size m-0">The delivery id to search for deletion.</p>
+              </div>
+            </div>
+      
+            <!-- RESPONSE -->
+            <div class="line p-0" style="border-color:rgba(211, 49, 49, 0.9); background-color: rgba(223, 124, 124, 0.9); box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.6);">
               <p class="font-bold font-size center">Responses</p>
             </div>
-            <div class="line p-0" style="border-color:rgb(110, 110, 110)">
+            <div class="line p-0" style="border: none">
               <div class="column">
                 <p class="font-bold font-size m-0">200</p>
               </div>
               <div class="column">
-                <p class="font-size m-0">The delivery object have been updated sucessfully.</p>
+                <p class="font-size m-0">The delivery object have been deleted sucessfully.</p>
               </div>
               <div class="column">
                 <p class="font-bold font-size m-0">401</p>
               </div>
               <div class="column">
-                  <p class="font-size m-0">The request missed or doesn't match the authentication in header.</p>
+                  <p class="font-size m-0">The request misseded or doesn't match the authentication in header.</p>
               </div>
               <div class="column">
                   <p class="font-bold font-size m-0">404</p>
@@ -404,74 +514,10 @@
                   <p class="font-size m-0">The requested delivery object was not found, 'ID' may be not added.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- DELETE -->
-      <div class="card" style="background-color:rgb(230, 173, 173); border-color: rgb(211, 49, 49)">
-          <!-- METHOD E PATH -->
-          <div class="line" style="border-color:rgb(211, 49, 49)">
-            <p class="method font-bold font-size" style="background-color:rgb(226, 43, 43); border-color: rgb(163, 23, 23)">DELETE</p>
-            <p class="path font-bold font-size-2">/deliveries/:deliveryId</p>
-            <p class="m-0 font-size" style="float: right; color: rgb(90, 0, 0)">Deletes the matching delivery object</p>
-          </div>
-    
-          <!-- HEADERS -->
-          <div class="line p-0" style="border-color:rgb(211, 49, 49); background-color: rgb(223, 124, 124);">
-            <p class="font-bold font-size center">Headers</p>
-          </div>
-          <div class="line p-0" style="border-color:rgb(211, 49, 49)">
-            <div class="column">
-              <p class="font-bold font-size m-0">Authentication</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">Basic YWRtaW46cHJvdmVkb3IyMDE5</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">Content-Type</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">application/json</p>
-            </div>
-          </div>
-
-          <!-- PARAMETERS -->
-          <div class="line p-0" style="border-color:rgb(211, 49, 49); background-color: rgb(223, 124, 124);">
-            <p class="font-bold font-size center">Parameters</p>
-          </div>
-          <div class="line p-0" style="border-color:rgb(211, 49, 49)">
-            <div class="column">
-              <p class="font-bold font-size m-0">deliveryId</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The delivery id to search for deletion.</p>
-            </div>
-          </div>
-    
-          <!-- RESPONSE -->
-          <div class="line p-0" style="border-color:rgb(211, 49, 49); background-color: rgb(223, 124, 124);">
-            <p class="font-bold font-size center">Responses</p>
-          </div>
-          <div class="line p-0" style="border-color:rgb(211, 49, 49)">
-            <div class="column">
-              <p class="font-bold font-size m-0">200</p>
-            </div>
-            <div class="column">
-              <p class="font-size m-0">The delivery object have been deleted sucessfully.</p>
-            </div>
-            <div class="column">
-              <p class="font-bold font-size m-0">401</p>
-            </div>
-            <div class="column">
-                <p class="font-size m-0">The request misseded or doesn't match the authentication in header.</p>
-            </div>
-            <div class="column">
-                <p class="font-bold font-size m-0">404</p>
-              </div>
-              <div class="column">
-                <p class="font-size m-0">The requested delivery object was not found, 'ID' may be not added.</p>
-              </div>
           </div>
         </div>
-
   </body>
+  <footer>
+      <p class="felipe">© Felipe G. Almeida - 2019</p>
+  </footer>
 </html>
