@@ -26,7 +26,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"location\": \"lat/long\"\r\n}"
 				},
 				"description": "Perform a POST to the API in Localhost:8080"
 			},
@@ -101,7 +101,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 1,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"location\": \"lat/long\"\r\n}"
 				},
 				"description": "Perform a PATCH by ID to the API in Localhost:8080"
 			},
@@ -126,7 +126,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 2,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"date\": 1567538560,\r\n    \"location\": \"lat/long\"\r\n}"
+					"raw": "{\r\n    \"orderId\": 1,\r\n    \"clientId\": 2,\r\n    \"receiver\": \"Nome\",\r\n    \"receiverCpf\": \"000.000.000-00\",\r\n    \"receiverIsclient\": false,\r\n    \"location\": \"lat/long\"\r\n}"
 				},
 				"description": "Perform a DELETE by ID to the API in Localhost:8080"
 			},
