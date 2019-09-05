@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Push Demo</title>
-    <script type="application/javascript" src="/client.js"></script>
+    <title>DM124 Welcome Page</title>
     <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <style>
+      body{
+        background-image: url(https://www.setaswall.com/wp-content/uploads/2017/12/Binary-Code-Wallpaper-07-1920x1080.jpg);
+        overflow: hidden;
+      }
+
+      .font-bold {
+        font-weight: 600;
+      }
+
+      .font-size {
+        font-size: 1.2rem;
+        margin: 1%;
+        margin-bottom: 1%;
+      }
+
+      .font-size-2 {
+        font-size: 2.5rem;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        color: rgb(71, 136, 199)
+      }
+
+      .center {
+        text-align: center;
+        display: block;
+      }
+
+      .cover{
+        width: 28%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+      }
+
+      .icon{
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .card{
+        border-radius: 10px;
+        border: 2px solid rgba(173, 216, 230, 0.9);
+        margin-right: 15%;
+        margin-left: 15%;
+        margin-top: 2%;
+        background-color: rgba(240, 248, 255, 0.9);
+      }
+
+      .column {
+        border-radius: 10px;
+        border: 2px solid rgba(167, 216, 233, 0.9);
+        background-color: rgba(240, 248, 255, 0.5);
+        display: inline-block;
+        margin-right: 2%;
+        margin-left: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 20%;
+        box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+
+      .felipe{
+        color:wheat;
+        position: relative;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-5%);
+        margin-top: 2.5%;
+      }
+
+    </style>
+    <script>
+      function openInNewTab(url, newTab) {
+        if(newTab)
+          var win = window.open(url)
+        else window.location.href = "./docs/index.html";
+      }
+    </script>
   </head>
 
   <body>
-    <h1>Welcome to DM124 Felipe API</h1>
-    <p>See the docs: <a href="./docs/index.html">docs</a></p>
+    <div class="card">
+      <p class="center font-size-2 font-bold">Welcome to my API web page</p>
+      <img class="cover" src="http://bitvoice.com.br/logon.png" alt="">
+      <p class="center font-size">Here is the API Welcome page. It contains some useful links, such as the API documentation,
+        my LinkedIn profile if you want contact me, my GitHub where you can find the API source code
+        (after being approved - before this it will remain private) and my curriculum.
+      </p>
+      
+      <div class="column" onclick="openInNewTab('./docs/index.html', false)">
+          <p class="center font-bold">DM124 API Docs</p>
+          <img class="icon" src="https://image.flaticon.com/icons/svg/681/681401.svg" alt="">
+          <p class="center">See the API docs</p>
+      </div>
+
+      <div class="column" onclick="openInNewTab('https://www.linkedin.com/in/felipe-g-almeida-b74385157/', true)">
+          <p class="center font-bold">LinkedIn</p>
+          <img class="icon" src="https://image.flaticon.com/icons/svg/187/187185.svg" alt="">
+          <p class="center">Felipe G. Almeida</p>
+      </div>
+
+      <div class="column" onclick="openInNewTab('https://github.com/FelipeGAlmeida', true)">
+          <p class="center font-bold">GitHub</p>
+          <img class="icon" src="https://image.flaticon.com/icons/svg/1051/1051275.svg" alt="">
+          <p class="center">FelipeGAlmeida</p>
+      </div>
+
+      <div class="column" onclick="openInNewTab('./docs/index.html', false)">
+          <p class="center font-bold">Curriculum</p>
+          <img class="icon" src="https://image.flaticon.com/icons/svg/236/236835.svg" alt="">
+          <p class="center">See Felipe's Curriculum</p>
+      </div>
+
+    </div>
+    
   </body>
+  <footer>
+      <p class="felipe">© Felipe G. Almeida - 2019</p>
+  </footer>
 </html>
