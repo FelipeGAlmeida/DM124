@@ -14,7 +14,8 @@ router.post('/', checkAuth, (request, response) => {
         request.body.receiverIsclient === undefined ||
         request.body.location === undefined){
             response.status(400).json({
-                message: "Missing fields in the request. Refer to the docs and try again"
+                message: "Missing fields in the request. Refer to the docs and try again",
+                docs: "Go to'./docs' for further help"
             })
             return response.end()
     }
@@ -70,7 +71,9 @@ router.delete('/:deliveryId', checkAuth, (request, response) => {
     const delivery = db[request.params.deliveryId];
   if(delivery) {
     delete db[delivery.id];
-    response.status(200).end();
+    response.status(200).json({
+        message: "The delivery was deleted successfully"
+    })
   } else {
     notFound(request, response);
   }
