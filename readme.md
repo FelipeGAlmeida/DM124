@@ -48,7 +48,7 @@ Segue abaixo alguns detalhes e especificações sobre a API desenvolvida para o 
 
 A API está preparada para rodar tanto no ambiente local (localhost:8080) quanto no ambiente online (provedores). Atualmente a API encontra-se *deployada* no provedor [Heroku](https://www.heroku.com/), pois é um serviço excelente, extremamente fácil de se utilizar e possuí um plano gratuito. Além do que até o momento de execução deste projeto eu mesmo não o conhecia, o que aumentou a vontade de conhecer e utilizar essa ferramenta.
 
-#### 🌐 URL base: https://dm124-felipe.herokuapp.com/api/
+#### 🌐 URL base para requisições na API: https://dm124-felipe.herokuapp.com/api/
 
 ## ◽️ Métodos ◽️
 
@@ -123,4 +123,13 @@ A API está preparada para rodar tanto no ambiente local (localhost:8080) quanto
 
 ### 🔶 Postman
 
-Na pasta [./Postman](https://github.com/FelipeGAlmeida/DM124/tree/master/Postman) se encontram as collections de teste, sendo possível a importação das mesmas no programa para realização das requisições na API, tanto no provedor Herouk quanto local. 
+Na pasta [./Postman](https://github.com/FelipeGAlmeida/DM124/tree/master/Postman) se encontram as collections de teste, sendo possível a importação das mesmas no programa para realização das requisições na API, tanto no provedor Herouk quanto local.  
+
+### 🔷 Webpage
+
+Existe também uma webpage criada, apenas para introdução da API e aproveitamento do endereço. Nela é possível encontrar alguns links úteis e também uma documentação bem simples sobre os métodos.
+
+#### 🌐 URL da Webpage: https://dm124-felipe.herokuapp.com/
+#### 📖 Especificação (Docs): https://dm124-felipe.herokuapp.com/docs/
+
+###### &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; © Felipe G. Almeida - 2019
