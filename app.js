@@ -8,7 +8,7 @@ const app = express();
 const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 8080;
 
-//Setup CORS policy
+// Setup CORS policy
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
@@ -18,20 +18,20 @@ app.use(function (req, res, next) {
     next();
 });
 
-//Setup body-parser to access req. body
+// Setup body-parser to access req. body
 app.use(bodyParser.json());
 
-//Setup the routes file
+// Setup the routes file
 app.use('/api/deliveries', routes);
 
-//Web pages setup
+// Web pages setup
 app.use('/', express.static('./static'));
 app.use('/docs', express.static('./static/docs'));
 
-//Setup default route for not found requests
+// Setup default route for not found requests
 app.use(not_found);
 
-//Start the server
+// Start the server
 http.createServer(app)
     .listen(port, function() {
         console.log(`Server up on http://${host}:${port}`);
