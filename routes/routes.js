@@ -1,5 +1,6 @@
 const express = require('express');
 const checkAuth = require('../utils/check-auth')
+const notFound = require('../utils/not-found')
 const router = express.Router();
 
 let db = {};
