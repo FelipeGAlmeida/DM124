@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CV - Felipe G. Almeida</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <style>
+        .no-margin {
+            margin: 0;
+        }
+
+        .image {
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .felipe {
+            color:navy;
+            margin-top: 2.5%;
+        }
+
+        .center {
+            text-align: center;
+            display: block;
+        }
+
+        div {
+            position: fixed;
+            width:60px;
+            height:60px;
+            bottom:20px;
+            right:20px;
+            background-image: url(http://aux.iconspalace.com/uploads/download-icon-256-361231194.png);
+            background-size: cover;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            box-shadow: 2px 2px 3px rgb(70, 70, 70);
+        }
+
+        
+        div:hover {
+            width:66px;
+            height:66px;
+        }
+
+    </style>
+
+    <script>
+      function openInNewTab(url, newTab) {
+        if(newTab)
+          var win = window.open(url)
+        else window.location.href = "./docs/index.html";
+      }
+
+      function download() {
+        var link = document.createElement('a');
+            link.href = "../pdf/CV_Felipe_Out2019.pdf"
+            link.download = "CV_Felipe_Out2019.pdf";
+            link.click();
+      }
+    </script>
+  </head>
+
+  <body class="no-margin" >    
+
+  <!-- Images -->
+  <img class="image no-margin" src="../images/projeto_curr.gif" alt="">
+  <img class="image no-margin" src="../images/projeto_curr_back.gif" alt="">
+
+  <div class="float" id="float" onclick="download()"></div>  
+    
+  </body>
+</html>

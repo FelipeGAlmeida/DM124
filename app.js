@@ -26,6 +26,7 @@ app.use('/api/deliveries', routes);
 
 // Web pages setup
 app.use('/', express.static('./static'));
+app.use('/cv', express.static('./static/cv'))
 app.use('/docs', express.static('./static/docs'));
 
 // Setup default route for not found requests

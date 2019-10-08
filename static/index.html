@@ -79,7 +79,7 @@
       function openInNewTab(url, newTab) {
         if(newTab)
           var win = window.open(url)
-        else window.location.href = "./docs/index.html";
+        else window.location.href = url;
       }
     </script>
   </head>
@@ -113,7 +113,7 @@
           <p class="center">FelipeGAlmeida</p>
       </div>
 
-      <div class="column" onclick="openInNewTab('./docs/index.html', false)">
+      <div class="column" onclick="openInNewTab('./cv/index.html', false)">
           <p class="center font-bold">Curriculum</p>
           <img class="icon" src="https://image.flaticon.com/icons/svg/236/236835.svg" alt="">
           <p class="center">See Felipe's Curriculum</p>
